@@ -1,59 +1,84 @@
 # HTTP Debugging Übung – Fehlerhafte Requests
 
----
 
-# AUFGABEN (zum Debuggen)
 
-## Aufgabe 1: POST ohne Content-Type
 
-```http
+
+
+
 POST https://jsonplaceholder.typicode.com/posts
-
+Content-Type: application/json
 {
   "title": "Test",
   "body": "Hallo"
 }
-```
+
+
+
+
+
+
+
 
 ---
 
 ## Aufgabe 2: Ungültiges JSON
 
-```http
+
 POST https://jsonplaceholder.typicode.com/posts
 Content-Type: application/json
 
 {
-  title: "Test"
+  "title": "Test"
 }
-```
 
----
 
-## Aufgabe 3: falsche HTTP-Methode
 
-```http
-get https://jsonplaceholder.typicode.com/posts/1
-```
 
----
 
-## Aufgabe 4: PUT unvollständig
 
-```http
+
+
+## Aufgabe 3: 
+
+
+GET https://jsonplaceholder.typicode.com/posts/1
+
+
+
+
+
+
+
+
+
+## Aufgabe 4: PUT unvollständig (TIPP: 4 Key and value Pairs wie in der usprünglichen GET Methode als
+REsponse gegeben wurde.)
+
+
 PUT https://jsonplaceholder.typicode.com/posts/1
 Content-Type: application/json
 
 {
   "title": "Neu"
 }
-```
 
----
 
-## Aufgabe 5: PATCH falsch verwendet
 
-```http
+
+
+
+
+
+
+
+
+
+
+
+## Aufgabe 5: 
+
+
 PATCH https://jsonplaceholder.typicode.com/posts/1
 Content-Type: application/json
 
@@ -62,29 +87,54 @@ Content-Type: application/json
   "title": "Neu",
   "body": "Neu"
 }
-```
+
+
+
+
+
+
 
 ---
 
-## Aufgabe 6: falsche URL
+## Aufgabe 6: 
 
-```http
+
 GET https://jsonplaceholder.typicode.com/postz/1
-```
+
+
+
+
+
+
+
+
+
 
 ---
 
-## Aufgabe 7: DELETE ohne ID
+## Aufgabe 7: DELETE 
 
-```http
+
 DELETE https://jsonplaceholder.typicode.com/posts/
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
 ## Aufgabe 8: JSON Syntaxfehler
 
-```http
+
 POST https://jsonplaceholder.typicode.com/posts
 Content-Type: application/json
 
@@ -92,28 +142,47 @@ Content-Type: application/json
   "title": "Test"
   "body": "Fehler"
 }
-```
+
+
+
+
+
+
+
+
 
 ---
 
-## Aufgabe 9: falscher Content-Type
+## Aufgabe 9: 
 
-```http
+
 POST https://jsonplaceholder.typicode.com/posts
 Content-Type: text/plain
 
 {
   "title": "Test"
 }
-```
+
+
+
+
+
+
+
+
 
 ---
 
-## Aufgabe 10: leerer POST Body
+## Aufgabe 10: 
 
-```http
-POST https://jsonplaceholder.typicode.com/posts
+
+POST https://jsonplaceholder.typicode.com/posts/1
 Content-Type: application/json
-```
+
+{
+  "title" : "
+
+
+}
 
 

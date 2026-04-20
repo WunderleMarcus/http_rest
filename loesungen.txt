@@ -4,7 +4,7 @@ LÖSUNGEN + ERKLÄRUNGEN
 
 ## Lösung 1
 
-```http
+
 POST https://jsonplaceholder.typicode.com/posts
 Content-Type: application/json
 
@@ -12,7 +12,7 @@ Content-Type: application/json
   "title": "Test",
   "body": "Hallo"
 }
-```
+
 
 **Erklärung:** Content-Type fehlt → Server kann JSON nicht interpretieren.
 
@@ -20,14 +20,14 @@ Content-Type: application/json
 
 ## Lösung 2
 
-```http
+
 POST https://jsonplaceholder.typicode.com/posts
 Content-Type: application/json
 
 {
   "title": "Test"
 }
-```
+
 
 **Erklärung:** JSON Keys brauchen Anführungszeichen.
 

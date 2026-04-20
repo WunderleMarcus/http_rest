@@ -7,12 +7,22 @@
 #- Nur angegebene Felder werden aktualisiert
 
 
-PATCH https://jsonplaceholder.typicode.com/posts/1
-Content-Type: application/json
+#PATCH https://jsonplaceholder.typicode.com/posts/1
+#Content-Type: application/json
 
 #BODY:
 #Nur das Feld, das geändert werden soll
 
+#{
+#  "title": "Nur der Titel wurde geändert"
+#}
+
+
+PATCH https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
 {
-  "title": "Nur der Titel wurde geändert"
+  "id": 1,
+  "title": "Neu",
+  "body": "Neu"
 }
