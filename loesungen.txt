@@ -1,1 +1,145 @@
+---
 
+LÖSUNGEN + ERKLÄRUNGEN
+
+## Lösung 1
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "body": "Hallo"
+}
+```
+
+**Erklärung:** Content-Type fehlt → Server kann JSON nicht interpretieren.
+
+---
+
+## Lösung 2
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Test"
+}
+```
+
+**Erklärung:** JSON Keys brauchen Anführungszeichen.
+
+---
+
+## Lösung 3
+
+```http
+GET https://jsonplaceholder.typicode.com/posts/1
+```
+
+**Erklärung:** HTTP-Methoden müssen groß geschrieben werden.
+
+---
+
+## Lösung 4
+
+```http
+PUT https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Neu",
+  "body": "Inhalt",
+  "userId": 1
+}
+```
+
+**Erklärung:** PUT ersetzt komplette Ressource → alle Felder nötig.
+
+---
+
+## Lösung 5
+
+```http
+PATCH https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
+{
+  "title": "Neu"
+}
+```
+
+**Erklärung:** PATCH verändert nur einzelne Felder.
+
+---
+
+## Lösung 6
+
+```http
+GET https://jsonplaceholder.typicode.com/posts/1
+```
+
+**Erklärung:** falscher Pfad („postz“ existiert nicht).
+
+---
+
+## Lösung 7
+
+```http
+DELETE https://jsonplaceholder.typicode.com/posts/1
+```
+
+**Erklärung:** ID ist notwendig um Ressource zu identifizieren.
+
+---
+
+## Lösung 8
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "body": "Fehler"
+}
+```
+
+**Erklärung:** JSON Syntaxfehler (fehlendes Komma).
+
+---
+
+## Lösung 9
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Test"
+}
+```
+
+**Erklärung:** falscher Content-Type verhindert richtige Verarbeitung.
+
+---
+
+## Lösung 10
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Test",
+  "body": "Inhalt",
+  "userId": 1
+}
+```
+
+**Erklärung:** POST benötigt Daten im Body.
+
+---
