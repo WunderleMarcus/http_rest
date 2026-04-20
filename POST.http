@@ -16,6 +16,6 @@ Content-Type: application/json
 
 {
   "title": "Mein erster Post",
-  "body": "Hallo Welt",
+  "body": "Hallo 25-11",
   "userId": 1
 }
