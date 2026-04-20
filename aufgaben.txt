@@ -1,0 +1,119 @@
+# HTTP Debugging Übung – Fehlerhafte Requests
+
+---
+
+# AUFGABEN (zum Debuggen)
+
+## Aufgabe 1: POST ohne Content-Type
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+
+{
+  "title": "Test",
+  "body": "Hallo"
+}
+```
+
+---
+
+## Aufgabe 2: Ungültiges JSON
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  title: "Test"
+}
+```
+
+---
+
+## Aufgabe 3: falsche HTTP-Methode
+
+```http
+get https://jsonplaceholder.typicode.com/posts/1
+```
+
+---
+
+## Aufgabe 4: PUT unvollständig
+
+```http
+PUT https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
+{
+  "title": "Neu"
+}
+```
+
+---
+
+## Aufgabe 5: PATCH falsch verwendet
+
+```http
+PATCH https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Neu",
+  "body": "Neu"
+}
+```
+
+---
+
+## Aufgabe 6: falsche URL
+
+```http
+GET https://jsonplaceholder.typicode.com/postz/1
+```
+
+---
+
+## Aufgabe 7: DELETE ohne ID
+
+```http
+DELETE https://jsonplaceholder.typicode.com/posts/
+```
+
+---
+
+## Aufgabe 8: JSON Syntaxfehler
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Test"
+  "body": "Fehler"
+}
+```
+
+---
+
+## Aufgabe 9: falscher Content-Type
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: text/plain
+
+{
+  "title": "Test"
+}
+```
+
+---
+
+## Aufgabe 10: leerer POST Body
+
+```http
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+```
+
+

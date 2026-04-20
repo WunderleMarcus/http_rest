@@ -1,0 +1,18 @@
+
+#ZWECK:
+#Nur einzelne Felder einer Ressource ändern
+
+#ERWARTETES ERGEBNIS:
+#- Status: 200 OK
+#- Nur angegebene Felder werden aktualisiert
+
+
+PATCH https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
+#BODY:
+#Nur das Feld, das geändert werden soll
+
+{
+  "title": "Nur der Titel wurde geändert"
+}

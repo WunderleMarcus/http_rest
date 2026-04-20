@@ -1,0 +1,10 @@
+#
+#ZWECK:
+#Daten vom Server abrufen (lesen, nichts verändern)
+
+#ERWARTETES ERGEBNIS:
+#- Status: 200 OK
+#- JSON mit einem Post wird zurückgegeben
+#
+
+GET https://jsonplaceholder.typicode.com/posts/1

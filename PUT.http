@@ -1,0 +1,22 @@
+
+#ZWECK:
+#Eine bestehende Ressource komplett ersetzen
+
+#ERWARTETES ERGEBNIS:
+#- Status: 200 OK
+#- Alte Daten werden vollständig überschrieben
+
+
+PUT https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json
+
+
+#BODY:
+#Alles muss angegeben werden, da komplett ersetzt wird
+
+{
+  "id": 1,
+  "title": "Komplett neu",
+  "body": "Alles wurde ersetzt",
+  "userId": 1
+}

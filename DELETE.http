@@ -1,0 +1,10 @@
+
+#ZWECK:
+#Eine Ressource löschen
+
+#ERWARTETES ERGEBNIS:
+#- Status: 200 OK oder 204 No Content
+#- Ressource wird entfernt (oder simuliert gelöscht)
+
+
+DELETE https://jsonplaceholder.typicode.com/posts/1

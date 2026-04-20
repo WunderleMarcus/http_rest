@@ -1,0 +1,21 @@
+
+#ZWECK:
+#Neue Ressource erstellen (z. B. neuen Post anlegen)
+
+#ERWARTETES ERGEBNIS:
+#- Status: 201 Created
+#- Server gibt neue "erstellte" Ressource zurück (mit ID)
+
+
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+
+#BODY:
+#Hier senden wir die neuen Daten an den Server
+
+{
+  "title": "Mein erster Post",
+  "body": "Hallo Welt",
+  "userId": 1
+}
